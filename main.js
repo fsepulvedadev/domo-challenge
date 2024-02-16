@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let imagenTag = document.createElement("img");
       imagenTag.width = 26;
       imagenTag.height = 26;
-      imagenTag.src = "./img/cerrar.svg";
+      imagenTag.src = "./cerrar.svg";
       imagenTag.id = "cerrar";
 
       boton.appendChild(imagenTag);
