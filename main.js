@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  /* Funcionalidad para scroll up con boton flotante, el cual se oculta subir por encima de la mitad de la web */
   var botonVolverArriba = document.getElementById("botonVolverArriba");
 
   window.addEventListener("scroll", function () {
@@ -23,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.scrollTop = 0;
   });
 
+  /* Funcionalidad para cambiar del icono de el menu mobile de el navbar  */
+
   let boton = document.querySelector(
     "body > div.container-fluid.p-0.hero > div > nav > div > button"
   );
@@ -35,7 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!boton.classList.contains("collapsed")) {
       boton.removeChild(iconoDeMenu);
 
-      boton.innerHTML = `<img id="cerrar" width='26px' heigth='26px' src="/img/cerrar.svg" alt="logo-domo" class="cerrar" />`;
+      let imagenTag = document.createElement("img");
+      imagenTag.width = 26;
+      imagenTag.height = 26;
+      imagenTag.src = "img/cerrar.svg";
+      imagenTag.id = "cerrar";
+
+      boton.appendChild(imagenTag);
 
       let btnCerrar = document.getElementById("cerrar");
       btnCerrar.addEventListener("click", () => {
